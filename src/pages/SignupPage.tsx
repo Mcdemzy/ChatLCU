@@ -3,45 +3,38 @@ import { Link } from "react-router-dom";
 
 const SignupPage: React.FC = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-50">
-      <div className="w-full max-w-md p-8 bg-white shadow-md rounded-lg">
+    <div className="flex items-center justify-center h-screen bg-gray-50 animate-fade-in">
+      <div className="w-full max-w-md p-8 bg-white shadow-md rounded-lg animate-slide-down">
         {/* Logo */}
-        <div className="flex justify-center mb-6">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/0/04/OpenAI_Logo.svg"
-            alt="ChatLCU Logo"
-            className="h-10 w-10"
-          />
+        <div className="flex justify-center mb-6 animate-fade-up">
+          <img src="images/chat.png" alt="ChatLCU Logo" className="h-10 w-10" />
         </div>
 
         {/* Heading */}
-        <h2 className="text-center text-2xl font-semibold text-gray-800 mb-4">
-          Create an account
+        <h2 className="text-center text-2xl font-semibold text-gray-800 mb-4 animate-fade-up-delay">
+          Create Your Account
         </h2>
 
         {/* Email Input */}
         <div>
-          <label htmlFor="email" className="block text-gray-700 font-medium">
-            Email address*
-          </label>
           <input
             id="email"
             type="email"
-            placeholder="Enter your email"
-            className="w-full mt-1 px-4 py-3 border rounded-lg text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            placeholder="Email address*"
+            className="w-full mt-1 px-4 py-3 border rounded-lg text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none animate-fade-up"
           />
         </div>
 
         {/* Continue Button */}
         <button
           type="submit"
-          className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg shadow-sm transition-all"
+          className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg shadow-sm transition-all animate-fade-up-delay"
         >
           Continue
         </button>
 
         {/* Login Link */}
-        <p className="text-center text-sm text-gray-500 mt-4">
+        <p className="text-center text-sm text-gray-500 mt-4 animate-fade-up">
           Already have an account?{" "}
           <Link to="/login" className="text-blue-600 hover:underline">
             Login
@@ -49,7 +42,7 @@ const SignupPage: React.FC = () => {
         </p>
 
         {/* Divider */}
-        <div className="relative my-6">
+        <div className="relative my-6 animate-fade-up-delay">
           <div className="absolute inset-0 flex items-center">
             <div className="w-full border-t border-gray-200"></div>
           </div>
@@ -59,53 +52,29 @@ const SignupPage: React.FC = () => {
         </div>
 
         {/* OAuth Buttons */}
-        <div className="space-y-3">
+        <div className="space-y-3 animate-fade-up">
           <button
             type="button"
             className="w-full flex items-center justify-center py-3 border rounded-lg text-gray-700 hover:bg-gray-100 transition"
           >
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+              src="images/google.png"
               alt="Google"
               className="h-5 w-5 mr-2"
             />
             Continue with Google
           </button>
-
-          <button
-            type="button"
-            className="w-full flex items-center justify-center py-3 border rounded-lg text-gray-700 hover:bg-gray-100 transition"
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
-              alt="Microsoft"
-              className="h-5 w-5 mr-2"
-            />
-            Continue with Microsoft Account
-          </button>
-
-          <button
-            type="button"
-            className="w-full flex items-center justify-center py-3 border rounded-lg text-gray-700 hover:bg-gray-100 transition"
-          >
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-              alt="Apple"
-              className="h-5 w-5 mr-2"
-            />
-            Continue with Apple
-          </button>
         </div>
 
         {/* Footer */}
-        <p className="text-center text-xs text-gray-400 mt-6">
-          <a href="#" className="hover:underline">
+        <p className="text-center text-xs text-gray-400 mt-6 animate-fade-up-delay">
+          <Link to="#" className="hover:underline">
             Terms of Use
-          </a>{" "}
+          </Link>{" "}
           |{" "}
-          <a href="#" className="hover:underline">
+          <Link to="#" className="hover:underline">
             Privacy Policy
-          </a>
+          </Link>
         </p>
       </div>
     </div>
