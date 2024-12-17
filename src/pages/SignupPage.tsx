@@ -20,7 +20,7 @@ const SignupPage: React.FC = () => {
           <input
             id="email"
             type="email"
-            placeholder="Email address*"
+            placeholder="Email address"
             className="w-full mt-1 px-4 py-3 border rounded-lg text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none animate-fade-up"
           />
         </div>
