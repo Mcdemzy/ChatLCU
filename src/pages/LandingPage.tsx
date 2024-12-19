@@ -7,6 +7,7 @@ import Icon5 from "/images/icon5.png";
 import Icon6 from "/images/icon6.png";
 import Icon7 from "/images/icon7.png";
 import { Link } from "react-router-dom";
+import Navbar from "../components/shared/Navbar";
 
 const LandingPage = () => {
   const [currentImage, setCurrentImage] = useState(Icon1);
@@ -27,23 +28,7 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white flex flex-col">
       {/* Navbar */}
-      <nav className="w-full bg-white shadow-md px-6 py-4 flex justify-between items-center animate-slide-down">
-        <div className="text-2xl font-bold text-blue-600">ChatLCU</div>
-        <div className="flex">
-          <Link
-            to="/signup"
-            className="text-gray-600 hover:text-blue-600 px-4 py-2 transition-colors hidden md:flex"
-          >
-            Sign up
-          </Link>
-          <Link
-            to="/login"
-            className="ml-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all"
-          >
-            Log in
-          </Link>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row justify-center items-center px-6 py-12 md:py-24">

@@ -1,28 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ChatInputBox from "./shared/ChatInputBox";
+import ChatInputBox from "../components/shared/ChatInputBox";
+import Navbar from "../components/shared/Navbar";
 
 const Home: React.FC = () => {
   return (
     <div className="bg-white text-gray-800 min-h-screen flex flex-col animate-fade-in">
       {/* Navbar */}
-      <nav className="w-full bg-white shadow-md px-6 py-4 flex justify-between items-center animate-slide-down">
-        <div className="text-2xl font-bold text-blue-600">ChatLCU</div>
-        <div className="flex">
-          <Link
-            to="/signup"
-            className="text-gray-600 hover:text-blue-600 px-4 py-2 transition-colors hidden md:flex"
-          >
-            Sign up
-          </Link>
-          <Link
-            to="/login"
-            className="ml-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-all"
-          >
-            Log in
-          </Link>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <header className="flex-1 flex flex-col items-center justify-center text-center px-6 animate-fade-up">
