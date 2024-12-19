@@ -5,12 +5,17 @@ import LoginPage from "./pages/auth/LoginPage";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import ForgotPassword from "./pages/auth/ForgotPassword";
+import Home from "./pages/Home";
+import HomeDemo from "./pages/HomeDemo";
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home/chat" element={<Home />} />
+          <Route path="/demo/chat" element={<HomeDemo />} />
           <Route path="/" element={<LandingPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
