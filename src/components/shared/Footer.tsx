@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       {/* Footer */}
-      <footer className="w-full text-gray-400 py-6 mt-auto text-[.75rem] md:text-[1rem] animate-fade-up-delay">
+      <footer className="w-full text-gray-400 py-6 mt-auto text-[.75rem] animate-fade-up-delay">
         <div className="text-center">
           <p>
             By using ChatLCU, you agree to our{" "}

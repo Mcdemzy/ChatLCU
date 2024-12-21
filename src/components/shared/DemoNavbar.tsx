@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
+import { HiOutlinePencilSquare } from "react-icons/hi2";
 
-const Navbar = () => {
+const DemoNavbar = () => {
   return (
     <div>
-      {/* Navbar */}
+      {/* DemoNavbar */}
       <nav className="w-full bg-white shadow-md px-6 py-4 flex justify-between items-center animate-slide-down">
-        <div className="text-2xl font-bold text-blue-600">
+        <div className="text-2xl font-bold text-blue-600 flex justify-center items-center gap-x-2 cursor-pointer">
+          <HiOutlinePencilSquare size={30} />
           <Link to="/">ChatLCU</Link>
         </div>
         <div className="flex">
@@ -27,4 +29,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default DemoNavbar;

@@ -1,7 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    navigate("/home/chat");
+  };
+
   return (
     <div className="flex items-center justify-center h-screen bg-gray-50 animate-fade-in">
       <div className="w-full max-w-md p-8 bg-white shadow-md rounded-lg animate-slide-down">
@@ -48,6 +54,7 @@ const Signup: React.FC = () => {
         <button
           type="submit"
           className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg shadow-sm transition-all animate-fade-up-delay"
+          onClick={handleSubmit}
         >
           Continue
         </button>

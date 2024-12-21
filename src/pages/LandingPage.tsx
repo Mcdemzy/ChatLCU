@@ -7,7 +7,7 @@ import Icon5 from "/images/icon5.png";
 import Icon6 from "/images/icon6.png";
 import Icon7 from "/images/icon7.png";
 import { Link } from "react-router-dom";
-import Navbar from "../components/shared/Navbar";
+import Navbar from "../components/shared/DemoNavbar";
 
 const LandingPage = () => {
   const [currentImage, setCurrentImage] = useState(Icon1);

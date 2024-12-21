@@ -1,13 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ChatInputBox from "../components/shared/ChatInputBox";
-import Navbar from "../components/shared/Navbar";
+import DemoNavbar from "../components/shared/DemoNavbar";
+import Footer from "../components/shared/Footer";
 
 const HomeDemo: React.FC = () => {
   return (
     <div className="bg-white text-gray-800 min-h-screen flex flex-col animate-fade-in">
       {/* Navbar */}
-      <Navbar />
+      <DemoNavbar />
       {/* Hero Section */}
       <header className="flex-1 flex flex-col items-center justify-center text-center px-6 animate-fade-up">
         <h1 className="text-[1.875rem] md:text-4xl font-extrabold text-gray-900 mb-4">
@@ -31,24 +31,7 @@ const HomeDemo: React.FC = () => {
       </header>
 
       {/* Footer */}
-      <footer className="w-full text-gray-400 py-6 mt-auto text-[.75rem] md:text-[1rem] animate-fade-up-delay">
-        <div className="text-center">
-          <p>
-            By using ChatLCU, you agree to our{" "}
-            <Link to="#" className="text-blue-400 hover:underline">
-              Terms
-            </Link>{" "}
-            and{" "}
-            <Link to="#" className="text-blue-400 hover:underline">
-              Privacy Policy
-            </Link>
-            .
-          </p>
-          <p className="mt-2">
-            © {new Date().getFullYear()} ChatLCU. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

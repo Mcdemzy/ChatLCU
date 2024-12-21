@@ -7,6 +7,7 @@ import Signup from "./pages/auth/Signup";
 import ForgotPassword from "./pages/auth/ForgotPassword";
 import Home from "./pages/Home";
 import HomeDemo from "./pages/HomeDemo";
+import HomeNavbar from "./components/shared/HomeNavbar";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/home/chat" element={<Home />} />
+          <Route path="/nav" element={<HomeNavbar />} />
           <Route path="/demo/chat" element={<HomeDemo />} />
           <Route path="/" element={<LandingPage />} />
           <Route path="/signup" element={<SignupPage />} />
