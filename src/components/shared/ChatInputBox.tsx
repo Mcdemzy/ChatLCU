@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FiPaperclip } from "react-icons/fi";
+import { BsPaperclip } from "react-icons/bs";
 import { BsGift } from "react-icons/bs";
 import { FaArrowUp } from "react-icons/fa";
+import { FiGlobe } from "react-icons/fi";
 
 const ChatInputBox: React.FC = () => {
   const [input, setInput] = useState<string>("");
@@ -25,18 +26,21 @@ const ChatInputBox: React.FC = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Message ChatLCU..."
-          className="w-full max-h-[10rem] min-h-[50px] overflow-y-auto px-4 pt-2 pb-2 text-gray-800 bg-transparent outline-none resize-none scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200  rounded-md"
+          className="w-full max-h-[10rem] overflow-y-auto px-2  pb-2 text-gray-800 bg-transparent outline-none resize-none scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200  rounded-md"
         />
       </div>
 
       {/* Bottom Icons + Send Button */}
-      <div className="flex items-center justify-between mt-2">
-        <div className="flex space-x-6">
+      <div className="flex justify-between">
+        <div className="flex space-x-3">
           <button className="text-gray-500 hover:text-gray-700">
-            <FiPaperclip size={20} />
+            <BsPaperclip size={22} />
           </button>
           <button className="text-gray-500 hover:text-gray-700">
             <BsGift size={20} />
+          </button>
+          <button className="text-gray-500 hover:text-gray-700">
+            <FiGlobe size={22} />
           </button>
         </div>
 
@@ -46,6 +50,7 @@ const ChatInputBox: React.FC = () => {
           onClick={() => {
             console.log("Message sent:", input);
             setInput("");
+            alert(input);
           }}
         >
           <FaArrowUp size={18} />
