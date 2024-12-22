@@ -1,8 +1,8 @@
 import React from "react";
 import ChatInputBox from "../components/shared/ChatInputBox";
 
-import HomeNavbar from "../components/shared/HomeNavbar";
 import Footer from "../components/shared/Footer";
+import HomeNavbar from "../components/HomeNavbar/HomeNavbar";
 
 const Home: React.FC = () => {
   return (
