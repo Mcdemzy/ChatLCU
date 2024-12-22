@@ -129,7 +129,7 @@ const ProfileModal = ({
                   </label>
                   <input
                     type="text"
-                    value="John Doe"
+                    value="Adeyemo Ademola"
                     className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -139,7 +139,7 @@ const ProfileModal = ({
                   </label>
                   <input
                     type="email"
-                    value="johndoe@example.com"
+                    value="adeyemoademola12@gmail.com"
                     className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -174,7 +174,7 @@ const ProfileModal = ({
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <button
-                className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600"
+                className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
                 onClick={() => alert("Change Password")}
               >
                 Change Password
