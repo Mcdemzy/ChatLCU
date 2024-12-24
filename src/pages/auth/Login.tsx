@@ -112,7 +112,7 @@ const Login: React.FC = () => {
             } text-white font-semibold py-3 rounded-lg shadow-sm transition-all animate-fade-up-delay`}
             disabled={isLoading}
           >
-            {isLoading ? "Logging in..." : "Continue"}
+            {isLoading ? "Logging in..." : "Login"}
           </button>
         </form>
 

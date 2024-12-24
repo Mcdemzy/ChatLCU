@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { LiaUserSolid } from "react-icons/lia";
 import { IoSettingsOutline } from "react-icons/io5";
 import { TbLogout } from "react-icons/tb";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ProfileDropdown = ({
   toggleProfileModal,
@@ -11,6 +11,7 @@ const ProfileDropdown = ({
 }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const navigate = useNavigate();
 
   const toggleDropdown = () => setDropdownOpen((prev) => !prev);
 
@@ -29,6 +30,14 @@ const ProfileDropdown = ({
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  const handleLogout = () => {
+    // Remove auth token from localStorage
+    localStorage.removeItem("authToken");
+
+    // Redirect to login page
+    navigate("/login");
+  };
 
   return (
     <div className="relative" ref={dropdownRef}>
@@ -59,14 +68,13 @@ const ProfileDropdown = ({
             <IoSettingsOutline size={20} />
             Settings
           </button>
-          <Link
-            to="/demo/chat"
+          <button
             className="flex items-center gap-2 w-full text-left px-4 py-2 text-sm text-red-500 hover:bg-gray-100"
-            onClick={() => alert("Logged Out")}
+            onClick={handleLogout}
           >
             <TbLogout size={20} />
             Log Out
-          </Link>
+          </button>
         </div>
       )}
     </div>
