@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Login: React.FC = () => {
+  const location = useLocation();
+  const email =
+    location.state?.email || localStorage.getItem("loginEmail") || ""; // Retrieve email from state or localStorage
+
   return (
     <div className="flex items-center justify-center h-screen bg-gray-50 animate-fade-in">
       <div className="w-full max-w-md p-8 bg-white shadow-md rounded-lg animate-slide-down">
@@ -19,13 +23,14 @@ const Login: React.FC = () => {
           Enter your password
         </h2>
 
-        {/* Email Input */}
+        {/* Prefilled Email Input */}
         <div className="animate-fade-up-delay relative">
           <input
             id="email"
             type="email"
-            placeholder="Email address"
-            className="w-full mt-1 px-4 py-3 border rounded-lg text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            value={email}
+            readOnly
+            className="w-full mt-1 px-4 py-3 border rounded-lg text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-100 cursor-not-allowed"
           />
           <Link
             to="/login"
@@ -34,7 +39,8 @@ const Login: React.FC = () => {
             Edit
           </Link>
         </div>
-        {/* Email Input */}
+
+        {/* Password Input */}
         <div className="animate-fade-up-delay">
           <input
             id="password"
@@ -44,7 +50,7 @@ const Login: React.FC = () => {
           />
         </div>
 
-        {/* Signup Link */}
+        {/* Forgot Password Link */}
         <p className="text-[1rem] text-gray-500 mt-4 animate-fade-up-delay">
           <Link to="/reset-password" className="text-blue-500 hover:underline">
             Forgot Password?

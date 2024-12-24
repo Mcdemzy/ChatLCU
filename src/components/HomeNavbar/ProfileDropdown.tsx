@@ -60,7 +60,7 @@ const ProfileDropdown = ({
             Settings
           </button>
           <Link
-            to="/logout"
+            to="/demo/chat"
             className="flex items-center gap-2 w-full text-left px-4 py-2 text-sm text-red-500 hover:bg-gray-100"
             onClick={() => alert("Logged Out")}
           >

@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const LoginPage: React.FC = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+
+  // Load email from localStorage when the component mounts
+  useEffect(() => {
+    const savedEmail = localStorage.getItem("loginEmail");
+    if (savedEmail) {
+      setEmail(savedEmail);
+    }
+  }, []);
 
   const handleSubmit = () => {
-    navigate("/login/password");
+    localStorage.setItem("loginEmail", email); // Save email to localStorage
+    navigate("/login/password", { state: { email } });
   };
 
   return (
@@ -31,6 +41,8 @@ const LoginPage: React.FC = () => {
             id="email"
             type="email"
             placeholder="Email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="w-full mt-1 px-4 py-3 border rounded-lg text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
         </div>
