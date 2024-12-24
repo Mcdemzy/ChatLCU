@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import ChatInputBox from "../components/shared/ChatInputBox";
 import DemoNavbar from "../components/shared/DemoNavbar";
 import Footer from "../components/shared/Footer";
+import { isAuthenticated } from "../utils/auth";
 
 const HomeDemo: React.FC = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated()) {
+      navigate("/home/chat", { replace: true });
+    }
+  }, [navigate]);
+
   return (
     <div className="bg-white text-gray-800 min-h-screen flex flex-col animate-fade-in">
       {/* Navbar */}
