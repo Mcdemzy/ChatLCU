@@ -6,7 +6,7 @@ import OAuth from "../../components/shared/OAuth";
 const Login: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [email, setEmail] = useState(
+  const [email] = useState(
     location.state?.email || localStorage.getItem("loginEmail") || ""
   );
   const [password, setPassword] = useState("");
