@@ -29,7 +29,7 @@ const Login: React.FC = () => {
 
     try {
       const response = await axios.post(
-        "https://chatlcu.vercel.app/api/auth/login",
+        "https://chatlcu-backend.vercel.app/api/auth/login",
         {
           email,
           password,
